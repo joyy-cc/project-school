@@ -135,6 +135,15 @@ button:hover {
         height: auto;
     }
 
+    input {
+        width: 250px;
+
+    }
+
+    button {
+        width: 270px;
+    }
+
     .left img {
         height: 200px;
     }
