@@ -2,14 +2,14 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration using environment variables
 const firebaseConfig = {
-    apiKey: "AIzaSyAIYhFTjwrznGg0RksDm7vfGK4uouLdkF4",
-    authDomain: "personal-budget-tracker-b95c1.firebaseapp.com",
-    projectId: "personal-budget-tracker-b95c1",
-    storageBucket: "personal-budget-tracker-b95c1.appspot.com",
-    messagingSenderId: "1085711794162",
-    appId: "1:1085711794162:web:0c7ff99888cb2336e5f56b"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
