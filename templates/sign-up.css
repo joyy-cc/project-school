@@ -121,6 +121,17 @@ button:hover {
     background-color: #ffeb3b;
 }
 
+
+/* Error message styling */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .signup {

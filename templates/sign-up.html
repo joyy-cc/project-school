@@ -6,7 +6,7 @@
     <title>Sign Up</title>
 
     <!-- CSS -->
-     <link rel="stylesheet" href="./sign-up.css">
+    <link rel="stylesheet" href="./sign-up.css">
 </head>
 <body>
 
@@ -14,14 +14,13 @@
         
         <!-- left section -->
         <div class="left">
-            <img src="./images/signup-graphic.jpg" alt="image" >
+            <img src="./images/signup-graphic.jpg" alt="image">
         </div>
         
         <!-- Right Section -->
         <div class="right">
             <h1>Let's create that account for you</h1>
             <h3>Already have an account? <a href="./login.html">Log In here</a></h3>
-            
             
             <!-- FORM -->
             <form id="registerForm">
@@ -32,11 +31,15 @@
                 <input type="password" id="regPassword" required><br><br>
                 
                 <button type="submit">Register</button>
-            
+                
+                <!-- Error Message -->
+                <div id="error-message" class="error-message"></div>
             </form>
-
+        </div>
     </div>
-    
-    
+
+    <!-- Firebase JS is now only included in the firebase.js module -->
+    <script type="module" src="./firebase.js"></script>
+
 </body>
 </html>
