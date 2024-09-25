@@ -1,0 +1,324 @@
+html, body {
+    margin: 0 50px;
+    margin-top: 10px;
+    color: white;
+    background-color: rgb(50, 50, 50);
+
+    font-family: 'Arial', sans-serif;;
+}
+
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Logo */
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* PROFILE */
+.profile {
+    text-decoration: none;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+
+/* DATE */
+.date {
+    text-align: right;
+    font-weight: 100;
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+/* Account Balance Card */
+.account-balance {
+    background-color: rgb(70, 70, 70);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.account-balance h3 {
+    margin: 0 0 2px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.account-balance p {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 100;
+    color: rgb(7, 188, 7);
+}
+
+/* Add hover effect for the card */
+.account-balance:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* PERIOD BETWEEN */
+.period-between {
+    margin-top: 50px;
+}
+
+.period-between h3 {
+    font-size: 18px;
+    
+}
+
+.period-between h4 {
+    font-weight: 100;
+}
+
+/* Parent container for the cards */
+.card-container {
+    display: flex;
+    justify-content: 30px;
+    align-items: center;
+    margin: 0;
+    margin-left: 0;
+}
+
+/* Cards layout */
+.expenses,
+.income,
+.savings {
+    background-color: rgb(70, 70, 70);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    margin: 10px;
+    /* Add margin for space between cards */
+    flex: 0 1 auto;
+    /* Prevents cards from growing but allows shrinking */
+    width: 150px;
+    /* Fixed width for uniformity */
+}
+
+.expenses:hover,
+.income:hover,
+.savings:hover {
+    transform: scale(1.05);
+}
+
+/* Button styles */
+.circular-button {
+    background-color: rgb(7, 188, 7);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.circular-button:hover {
+    background-color: rgb(10, 220, 10);
+}
+
+/* Amount styling */
+.amount {
+    font-size: 18px;
+    font-weight: 100;
+    color: rgb(7, 188, 7);
+    margin: 10px 0;
+}
+
+
+
+/* Transactions History */
+.transactions-history {
+    margin-top: 30px;
+}
+
+.transactions-history h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Transaction Card Styling */
+.transaction-card {
+    background-color: rgb(70, 70, 70);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.transaction-card:hover {
+    transform: scale(1.05);
+}
+
+/* Transaction List */
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Transaction Item */
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+/* Transaction Number */
+.transaction-number {
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #f1f1f1;
+}
+
+/* Transaction Details (Name and Date) */
+.transaction-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.transaction-name {
+    font-weight: 400;
+}
+
+.transaction-date {
+    font-size: 14px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Transaction Amount */
+.transaction-amount {
+    font-weight: 700;
+    color: #ff4d4d;
+    /* Red for expenses */
+}
+
+.transaction-amount.income {
+    color: rgb(7, 188, 7);
+    /* Green for income */
+}
+
+
+
+/* Savings Goals Section */
+.savings-goals {
+    background-color: rgb(70, 70, 70);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    transition: transform 0.2s;
+}
+
+.savings-goals:hover {
+    transform: scale(1.05);
+}
+
+/* Savings Goals Title */
+.savings-goals h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Individual Goal Card */
+.goal {
+    margin-bottom: 20px;
+}
+
+/* Goal Details (Name and Amount) */
+.goal-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.goal-name {
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+}
+
+.goal-amount {
+    font-size: 16px;
+    color: rgba(7, 188, 7, 1);
+}
+
+/* Progress Bar Container */
+.goal-progress-bar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Progress Bar Fill */
+.goal-progress {
+    background-color: rgb(7, 188, 7);
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+/* Add New Goal Button */
+.add-goal-button {
+    background-color: rgb(7, 188, 7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-goal-button:hover {
+    background-color: rgb(10, 220, 10);
+    transform: scale(1.05);
+}

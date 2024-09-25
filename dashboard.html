@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">Budget Planner</div>
+
+      <a href="profile-settings.html" class="profile">
+        <img
+          src="./templates/images/login-graphic.jpg"
+          alt="Profile"
+          class="profile-image"
+        />
+      </a>
+    </div>
+
+    <!-- DATE -->
+    <div class="date">25th Sept 2024</div>
+
+    <!-- ACCOUNT BALANCE -->
+    <div class="account-balance card">
+      <h3>BALANCE</h3>
+      <p id="balance-amount">Kshs 1,250.00</p>
+    </div>
+
+    <!-- PERIOD BETWEEN -->
+    <div class="period-between">
+      <h3>PERIOD BETWEEN: 1st - 30th Sept 2024</h3>
+
+      <div class="card-container">
+        <div class="expenses">
+          <h4>EXPENSES</h4>
+          <p class="amount" id="expensesAmount">Kshs 0.00</p>
+          <button class="circular-button" id="addExpenseButton">+</button>
+        </div>
+
+        <div class="income">
+          <h4>INCOME</h4>
+          <p class="amount" id="incomeAmount">Kshs 0.00</p>
+          <button class="circular-button" id="addIncomeButton">+</button>
+        </div>
+
+        <div class="savings">
+          <h4>SAVINGS</h4>
+          <p class="amount" id="savingsAmount">Kshs 0.00</p>
+          <button class="circular-button" id="addSavingsButton">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRANSACTIONS HISTORY -->
+    <div class="transactions-history">
+      <h3>TRANSACTIONS HISTORY</h3>
+      <div class="transaction-card">
+        <ul class="transaction-list">
+          <li class="transaction-item">
+            <span class="transaction-number">1.</span>
+            <div class="transaction-details">
+              <span class="transaction-name">Coffee Shop</span>
+              <span class="transaction-date">Sep 22, 2024</span>
+            </div>
+            <span class="transaction-amount">- Kshs 5.00</span>
+          </li>
+          <li class="transaction-item">
+            <span class="transaction-number">2.</span>
+            <div class="transaction-details">
+              <span class="transaction-name">Salary</span>
+              <span class="transaction-date">Sep 21, 2024</span>
+            </div>
+            <span class="transaction-amount income">+ Kshs 2,000.00</span>
+          </li>
+          <li class="transaction-item">
+            <span class="transaction-number">3.</span>
+            <div class="transaction-details">
+              <span class="transaction-name">Grocery Store</span>
+              <span class="transaction-date">Sep 20, 2024</span>
+            </div>
+            <span class="transaction-amount">- Kshs50.00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SAVINGS GOALS -->
+    <div class="savings-goals">
+      <h3>SAVINGS GOALS</h3>
+
+      <!-- Individual Savings Goals -->
+      <div class="goal">
+        <div class="goal-details">
+          <span class="goal-name">Vacation Fund</span>
+          <span class="goal-amount">Kshs500 / Kshs2000</span>
+        </div>
+        <div class="goal-progress-bar">
+          <div class="goal-progress" style="width: 25%"></div>
+        </div>
+      </div>
+
+      <div class="goal">
+        <div class="goal-details">
+          <span class="goal-name">Emergency Fund</span>
+          <span class="goal-amount">Kshs1000 / Kshs5000</span>
+        </div>
+        <div class="goal-progress-bar">
+          <div class="goal-progress" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="goal">
+        <div class="goal-details">
+          <span class="goal-name">New Car Fund</span>
+          <span class="goal-amount">kshs2000 / Kshs10000</span>
+        </div>
+        <div class="goal-progress-bar">
+          <div class="goal-progress" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <!-- Button to Add New Goal -->
+      <button class="add-goal-button">ADD NEW GOAL</button>
+    </div>
+
+  </body>
+</html>
