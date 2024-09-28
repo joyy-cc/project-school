@@ -101,40 +101,44 @@ html, body {
 }
 
 
-/* Overlay Background */
+/* Overlay Styles */
 .overlay {
     display: none;
-    /* Hidden by default */
+    /* Keep it hidden initially */
     position: fixed;
+    /* Fixed position to cover the whole viewport */
     top: 0;
+    /* Position from the top */
     left: 0;
+    /* Position from the left */
     width: 100%;
+    /* Full width */
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Black background with opacity */
-    z-index: 9999;
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    z-index: 999;
+    /* Ensure it's above other content */
 }
 
-/* Overlay Content */
+/* Overlay Content Styles */
 .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgb(70, 70, 70);
-    border-radius: 8px;
     padding: 20px;
-    width: 300px;
-    /* Adjust the width as needed */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Optionally add a transition for smoothness */
-    transition: all 0.3s ease;
-    /* Smooth transition for appearing */
+    width: 300px;
+    color: white;
 }
 
 .overlay-content h3 {
     margin-bottom: 20px;
     color: white;
+    /* White text */
     text-align: center;
 }
 
@@ -142,6 +146,7 @@ html, body {
     display: block;
     margin-bottom: 5px;
     color: white;
+    /* White text for labels */
 }
 
 .overlay-content input,
@@ -152,32 +157,40 @@ html, body {
     border-radius: 5px;
     border: none;
     background-color: rgb(50, 50, 50);
+    /* Dark gray background for inputs */
     color: white;
+    /* White text for inputs */
 }
 
 .overlay-content button {
     width: 100%;
     padding: 10px;
     background-color: rgb(7, 188, 7);
+    /* Green background for buttons */
     color: white;
+    /* White text for buttons */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    /* Smooth transition for hover */
 }
 
 .overlay-content button:hover {
     background-color: rgb(10, 220, 10);
+    /* Lighter green on hover */
 }
 
 /* Close Button */
 .overlay-close {
     background-color: red;
+    /* Red for close button */
     margin-top: 10px;
 }
 
 .overlay-close:hover {
     background-color: darkred;
+    /* Darker red on hover */
 }
 
 /* Parent container for the cards */
