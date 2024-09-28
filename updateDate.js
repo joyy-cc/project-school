@@ -1,14 +1,13 @@
-// Function to update the date dynamically
-function updateDate() {
-  const dateElement = document.querySelector('.date');
-  const options = { day: 'numeric', month: 'long', year: 'numeric' };
-
-  // Get the current date and format it
-  const today = new Date().toLocaleDateString('en-US', options);
-
-  // Insert the formatted date into the div
-  dateElement.textContent = today;
+// Function to update the current date
+function updateCurrentDate() {
+    const dateElement = document.querySelector('.date');
+    const currentDate = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    dateElement.textContent = currentDate; // Update the date display
 }
 
-// Call the function when the page loads
-window.onload = updateDate;
+// Call the function to update the date on page load
+updateCurrentDate();

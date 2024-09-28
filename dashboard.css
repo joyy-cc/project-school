@@ -100,6 +100,86 @@ html, body {
     font-weight: 100;
 }
 
+
+/* Overlay Background */
+.overlay {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black background with opacity */
+    z-index: 9999;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+/* Overlay Content */
+.overlay-content {
+    background-color: rgb(70, 70, 70);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    /* Adjust the width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optionally add a transition for smoothness */
+    transition: all 0.3s ease;
+    /* Smooth transition for appearing */
+}
+
+.overlay-content h3 {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.overlay-content label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.overlay-content input,
+.overlay-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.overlay-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(7, 188, 7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-content button:hover {
+    background-color: rgb(10, 220, 10);
+}
+
+/* Close Button */
+.overlay-close {
+    background-color: red;
+    margin-top: 10px;
+}
+
+.overlay-close:hover {
+    background-color: darkred;
+}
+
 /* Parent container for the cards */
 .card-container {
     display: flex;

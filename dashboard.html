@@ -31,6 +31,48 @@
       <p id="balance-amount">Kshs 1,250.00</p>
     </div>
 
+    <!-- EXPENSE OVERLAY (Initially Hidden) -->
+    <div id="expense-overlay" class="overlay">
+      <div class="overlay-content">
+        <h3>Add Expense</h3>
+        <form id="expense-form">
+          <label for="expenseName">What are you spending on:</label>
+          <input
+            type="text"
+            id="expenseName"
+            name="expenseName"
+            placeholder="Enter expense name"
+            required
+          />
+
+          <label for="expenseAmount">How much are you spending (Kshs):</label>
+          <input
+            type="number"
+            id="expenseAmount"
+            name="expenseAmount"
+            placeholder="Enter amount"
+            required
+          />
+
+          <label for="expenseDate">Date:</label>
+          <input type="date" id="expenseDate" name="expenseDate" required />
+
+          <label for="expenseCategory">Category:</label>
+          <select id="expenseCategory" name="expenseCategory" required>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+          </select>
+
+          <button type="submit" class="overlay-button">Add Expense</button>
+          <button type="button" class="overlay-close" id="closeExpenseOverlay">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+
     <!-- PERIOD BETWEEN -->
     <div class="period-between">
       <h3>PERIOD BETWEEN: 1st - 30th Sept 2024</h3>
@@ -61,30 +103,7 @@
       <h3>TRANSACTIONS HISTORY</h3>
       <div class="transaction-card">
         <ul class="transaction-list">
-          <li class="transaction-item">
-            <span class="transaction-number">1.</span>
-            <div class="transaction-details">
-              <span class="transaction-name">Coffee Shop</span>
-              <span class="transaction-date">Sep 22, 2024</span>
-            </div>
-            <span class="transaction-amount">- Kshs 5.00</span>
-          </li>
-          <li class="transaction-item">
-            <span class="transaction-number">2.</span>
-            <div class="transaction-details">
-              <span class="transaction-name">Salary</span>
-              <span class="transaction-date">Sep 21, 2024</span>
-            </div>
-            <span class="transaction-amount income">+ Kshs 2,000.00</span>
-          </li>
-          <li class="transaction-item">
-            <span class="transaction-number">3.</span>
-            <div class="transaction-details">
-              <span class="transaction-name">Grocery Store</span>
-              <span class="transaction-date">Sep 20, 2024</span>
-            </div>
-            <span class="transaction-amount">- Kshs50.00</span>
-          </li>
+          <!-- Transaction items will be dynamically inserted here -->
         </ul>
       </div>
     </div>
@@ -129,7 +148,8 @@
     </div>
 
     <!-- SCRIPTS -->
-     <script src="./updateDate.js"></script>
-
+    <script src="./updateDate.js"></script>
+    <script src="./balance.js"></script>
+    <script src="./expenses.js"></script>
   </body>
 </html>
