@@ -419,3 +419,10 @@ html, body {
     background-color: rgb(10, 220, 10);
     transform: scale(1.05);
 }
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 100;
+    font-size: 14px;
+}
