@@ -271,6 +271,10 @@ html, body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
+    max-height: 300px;
+    /* Set a maximum height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
 }
 
 .transaction-card:hover {
