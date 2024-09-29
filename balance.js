@@ -5,8 +5,14 @@ const balanceAmountElement = document.getElementById('balance-amount');
 let balance = parseFloat(localStorage.getItem('balance')) || 1250.00; // Example starting balance
 
 // Function to update the displayed balance
-function updateBalance(amount) {
-    balance -= amount; // Deduct the expense amount
+function updateBalance(amount, isExpense = true) {
+    // Update balance based on whether it's an expense or income
+    if (isExpense) {
+        balance -= amount; // Deduct the expense amount
+    } else {
+        balance += amount; // Add the income amount
+    }
+
     balanceAmountElement.textContent = `Kshs ${balance.toFixed(2)}`; // Update the display
     localStorage.setItem('balance', balance); // Save updated balance to local storage
 }
