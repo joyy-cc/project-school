@@ -362,44 +362,26 @@ html, body {
     color: white;
 }
 
-/* Individual Goal Card */
-.goal {
-    margin-bottom: 20px;
-}
-
-/* Goal Details (Name and Amount) */
-.goal-details {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-
-.goal-name {
-    font-size: 16px;
-    font-weight: 100;
+/* Goal card styling */
+.goal-card {
+    background-color: rgb(70, 70, 70);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: white;
 }
 
-.goal-amount {
+.goal-card .goal-name {
     font-size: 16px;
-    color: rgba(7, 188, 7, 1);
+    font-weight: bold;
+    color: rgb(7, 188, 7);
+    /* Highlight goals in green */
 }
 
-/* Progress Bar Container */
-.goal-progress-bar {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    height: 10px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-/* Progress Bar Fill */
-.goal-progress {
-    background-color: rgb(7, 188, 7);
-    height: 100%;
-    transition: width 0.4s ease;
+.goal-card .goal-target {
+    font-size: 14px;
+    color: rgb(150, 150, 150);
 }
 
 /* Add New Goal Button */

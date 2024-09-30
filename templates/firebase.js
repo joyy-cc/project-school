@@ -4,13 +4,14 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 
 // Your web app's Firebase configuration using environment variables
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID
+    apiKey: "AIzaSyAIYhFTjwrznGg0RksDm7vfGK4uouLdkF4",
+    authDomain: "personal-budget-tracker-b95c1.firebaseapp.com",
+    projectId: "personal-budget-tracker-b95c1",
+    storageBucket: "personal-budget-tracker-b95c1.appspot.com",
+    messagingSenderId: "1085711794162",
+    appId: "1:1085711794162:web:0c7ff99888cb2336e5f56b"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -29,7 +30,7 @@ document.getElementById('registerForm')?.addEventListener('submit', function (ev
         .then((userCredential) => {
             errorMessageDiv.textContent = '';  // Clear any previous error message
             // Registration successful
-            window.location.href = '../index.html';  // Redirect after success
+            window.location.href = '../dashboard.html';  // Redirect after success
         })
         .catch((error) => {
             errorMessageDiv.textContent = error.message;  // Display error message
@@ -47,7 +48,7 @@ document.getElementById('loginForm')?.addEventListener('submit', function (event
         .then((userCredential) => {
             errorMessageDiv.textContent = '';  // Clear any previous error message
             // Login successful
-            window.location.href = '../index.html';  // Redirect after success
+            window.location.href = '../dashboard.html';  // Redirect after success
         })
         .catch((error) => {
             errorMessageDiv.textContent = error.message;  // Display error message
