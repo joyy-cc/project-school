@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="./sign-up.css"> <!-- Include if needed for styles -->
 </head>
 <body>
     <div class="container">
@@ -15,10 +16,10 @@
             <h2>Log In</h2>
             <p>Welcome back!</p>
             <form id="loginForm">
-                <label for="loginEmail">Email</label>
+                <label for="loginEmail">Email:</label>
                 <input type="email" id="loginEmail" required>
                 
-                <label for="loginPassword">Password</label>
+                <label for="loginPassword">Password:</label>
                 <input type="password" id="loginPassword" required>
                 
                 <button type="submit">Log In</button>
@@ -27,6 +28,7 @@
             <p>Don’t have an account? <a href="./sign-up.html">Create one here</a></p>
         </div>
     </div>
+
     <script type="module">
         import { auth, signInWithEmailAndPassword } from './firebase.js';
 
@@ -45,4 +47,3 @@
     </script>
 </body>
 </html>
-
