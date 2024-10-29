@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="./style.css"> <!-- Ensure this path is correct -->
     <link rel="stylesheet" href="./sign-up.css"> <!-- Include if needed for styles -->
 </head>
 <body>
     <div class="container">
         <div class="left-section">
-            <img src="./images/login-graphic.jpg" alt="Login Image">
+            <img src="./images/signup-graphic.jpg" alt="Sign Up Image">
         </div>
         <div class="right-section">
-            <h2>Log In</h2>
-            <p>Welcome back!</p>
-            <form id="loginForm">
-                <label for="loginEmail">Email:</label>
-                <input type="email" id="loginEmail" required>
-                
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" required>
-                
-                <button type="submit">Log In</button>
+            <h2>Sign Up</h2>
+            <p>Let's create an account for you</p>
+            <form id="registerForm">
+                <label for="regEmail">Email:</label>
+                <input type="email" id="regEmail" required>
+
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" required>
+
+                <button type="submit">Register</button>
                 <div id="error-message" class="error-message"></div>
             </form>
-            <p>Don’t have an account? <a href="./sign-up.html">Create one here</a></p>
+            <p>Already have an account? <a href="./login.html">Log In here</a></p>
         </div>
     </div>
 
     <script type="module">
-        import { auth, signInWithEmailAndPassword } from './firebase.js';
+        import { auth, createUserWithEmailAndPassword } from './firebase.js';
 
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
 
             try {
-                await signInWithEmailAndPassword(auth, email, password);
-                window.location.href = 'dashboard.html'; // Redirect to dashboard after successful login
+                await createUserWithEmailAndPassword(auth, email, password);
+                window.location.href = 'login.html'; // Redirect to login after successful signup
             } catch (error) {
                 document.getElementById('error-message').textContent = error.message;
             }
