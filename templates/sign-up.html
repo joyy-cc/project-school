@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./sign-up.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <div class="signup">
-        
-        <!-- left section -->
-        <div class="left">
-            <img src="./images/signup-graphic.jpg" alt="image">
+    <div class="container">
+        <div class="left-section">
+            <img src="./images/signup-graphic.jpg" alt="Sign Up Image">
         </div>
-        
-        <!-- Right Section -->
-        <div class="right">
-            <h1>Let's create that account for you</h1>
-            <h3>Already have an account? <a href="./login.html">Log In here</a></h3>
-            
-            <!-- FORM -->
+        <div class="right-section">
+            <h2>Sign Up</h2>
+            <p>Let's create an account for you</p>
             <form id="registerForm">
-                <label for="regEmail">Email:</label>
-                <input type="email" id="regEmail" required><br><br>
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" required>
                 
-                <label for="regPassword">Password:</label>
-                <input type="password" id="regPassword" required><br><br>
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" required>
                 
                 <button type="submit">Register</button>
-                
-                <!-- Error Message -->
                 <div id="error-message" class="error-message"></div>
             </form>
+            <p>Already have an account? <a href="./login.html">Log In here</a></p>
         </div>
     </div>
+    <script type="module">
+        import { auth, createUserWithEmailAndPassword } from './firebase.js';
 
-    <!-- Firebase JS is now only included in the firebase.js module -->
-    <script type="module" src="./firebase.js"></script>
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
 
+            try {
+                await createUserWithEmailAndPassword(auth, email, password);
+                window.location.href = 'login.html'; // Redirect to login after successful signup
+            } catch (error) {
+                document.getElementById('error-message').textContent = error.message;
+            }
+        });
+    </script>
 </body>
 </html>
+
