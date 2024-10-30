@@ -1,8 +1,8 @@
-// Import the functions you need from the Firebase SDKs
+// Import necessary Firebase functions
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
 
-// Your web app's Firebase configuration using environment variables
+// Your Firebase configuration (hardcoded)
 const firebaseConfig = {
     apiKey: "AIzaSyAIYhFTjwrznGg0RksDm7vfGK4uouLdkF4",
     authDomain: "personal-budget-tracker-b95c1.firebaseapp.com",
@@ -12,11 +12,8 @@ const firebaseConfig = {
     appId: "1:1085711794162:web:0c7ff99888cb2336e5f56b"
 };
 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase Authentication
 const auth = getAuth();
 
 // Handle user registration
@@ -29,11 +26,12 @@ document.getElementById('registerForm')?.addEventListener('submit', function (ev
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             errorMessageDiv.textContent = '';  // Clear any previous error message
-            // Registration successful
-            window.location.href = '../dashboard.html';  // Redirect after success
+            console.log('Registration successful:', userCredential);
+            window.location.href = 'dashboard.html';  // Redirect after success
         })
         .catch((error) => {
             errorMessageDiv.textContent = error.message;  // Display error message
+            console.error("Registration error:", error); // Log the error
         });
 });
 
@@ -47,10 +45,11 @@ document.getElementById('loginForm')?.addEventListener('submit', function (event
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             errorMessageDiv.textContent = '';  // Clear any previous error message
-            // Login successful
-            window.location.href = '../dashboard.html';  // Redirect after success
+            console.log('Login successful:', userCredential);
+            window.location.href = 'dashboard.html';  // Redirect after success
         })
         .catch((error) => {
             errorMessageDiv.textContent = error.message;  // Display error message
+            console.error("Login error:", error); // Log the error
         });
 });
